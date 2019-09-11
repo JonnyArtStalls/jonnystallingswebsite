@@ -1,0 +1,219 @@
+/*
+* author: Chad McKell
+* reference: w3schools.com
+*/
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.nav {
+  float: right;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #000; /* black */
+  opacity: 0.8;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav li a {
+  display: inline-block;
+  color: white;
+  opacity: 1.0;
+  padding: 10px 21px;
+  text-decoration: none;
+}
+
+.nav li a.active {
+  background-color: #000; /* black */
+  opacity: 1.0;
+  color: #FF4500; /* orange red */
+}
+
+
+.nav li a:hover:not(.active) {
+  background-color: white;
+  color: #000; /* black */ 
+}
+
+.navpos {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 500px;
+  height: 50px;
+}
+
+.container a:hover {
+  color: #F03F69; /*pink red */
+}
+
+.container op a {
+  opacity: 1.0;
+}
+
+.container op a:hover {
+  opacity: 0.7;
+}
+
+.name {
+  float: left;
+}
+
+.namepos {
+  color: #FF4500; /* orange red */ 
+  position: absolute;
+  top: 20px;
+  left: 90px;
+  width: 400px;
+  height: 10px;
+}
+
+.titlepos {
+  color: #FF4500; /* orange red */ 
+  position: absolute;
+  top: 60px;
+  left: 90px;
+  width: 400px;
+  height: 10px;
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #000 url("https://chadmckell.com/images/icon.png");
+  opacity: 0.8;
+}
+
+.section {
+  background-color: white;  
+  padding: 16px 16px;
+  text-align: left;
+}
+
+.footer {
+  background-color: white;  
+  color: #000;
+  padding: 40px;
+  text-align: center;
+}
+
+.hero-image {
+  background-image: url("https://chadmckell.com/images/amp_bw.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-image-port {
+  background-image: url("https://chadmckell.com/images/wave.jpg");
+  height: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-image-port-sub {
+  background-image: url("https://chadmckell.com/images/amp.jpg");
+  height: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-image-pub {
+  background-image: url("https://chadmckell.com/images/mixer.jpg");
+  height: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-image-about {
+  background-image: url("https://chadmckell.com/images/glen.jpg");
+  height: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media only screen and (max-width: 900px){
+  #menu-icon{
+    display: inline-block;
+  }
+  
+  .nav ul {
+    display: none;
+    float: right;
+    position: absolute;
+  }
+  
+.namepos {
+  left: 60px;
+}
+
+.titlepos {
+  left: 60px;
+}
+    .hero-image {
+    height: 400px;
+  }
+  
+  .hero-image-port {
+    height: 100px;
+  }
+  .hero-image-pub {
+    height: 100px;
+  }
+  
+  .hero-image-about {
+    height: 100px;
+  }
+}
+
+/* Reference for image wrapping: https://stackoverflow.com/questions/14263594/how-to-show-text-on-image-when-hovering
+*/
+
+.img-wrap {
+  position: relative;
+  height: 325px;
+  width: 300px;
+}
+
+.img-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(50,50,50, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.img-wrap:hover .img-description {
+  visibility: visible;
+  opacity: 1;
+}
